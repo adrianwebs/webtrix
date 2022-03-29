@@ -2,6 +2,11 @@
   --font-secondary: 'Space Mono', monospace;
   --font-base: 'Titillium Web', sans-serif;
 
+  --color-primary: #C6E2FF;
+  --color-secondary: #ff512d;
+  --color-white: #fcfcfc;
+  --color-black: #141414;
+  --color-dark-blue: #001422;
 
 }
 
@@ -22,3 +27,4 @@ a {
 * {
   box-sizing: border-box;
 }
+-
