@@ -7,7 +7,6 @@
   --color-white: #fcfcfc;
   --color-black: #141414;
   --color-dark-blue: #001422;
-
 }
 
 html,
@@ -27,4 +26,3 @@ a {
 * {
   box-sizing: border-box;
 }
--
