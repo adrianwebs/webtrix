@@ -1,9 +1,16 @@
+:root {
+  --primary-color: #FF512D;
+  --secondary-color: #C6E2FF;
+  --white: #fcfcfc;
+  --black: #141414;
+  --dark-blue: #001622;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 a {
@@ -13,4 +20,9 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Knucklehead;
+  src: url(../public/assets/fonts/Knucklehead.otf);
 }
