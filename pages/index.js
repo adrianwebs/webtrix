@@ -69,32 +69,60 @@ export default function Home() {
             </div>
           </div>
         </main>
-        <section id='Prices'>
+        <section id='Prices' className={styles.landing_prices_container}>
           <div className={styles.landing_prices_content}>
-            <h2>Services that WEBTRIX offers</h2>
-            <h3> More and more websites are coming into being, but it's hard to get a professional web design. Webstartic provide the one-click web page design service and makes your web page design idea into reality!</h3>
+            <h2>Plans & Pricing</h2>
+            <h3>30 days money back guarantee. No Credit Card Required!</h3>
           </div>
           <div className={styles.landing_prices_packages}>
             <div className={styles.landing_prices_pack}>
-              <h4>Titulo</h4>
-              <div className={styles.landing_prices_feature}>
-                <h5>Incluye mantenimiento web bla bla bla</h5>
+              <div className={styles.landing_prices_header}>
+                <h4>Basic Pack</h4>
+                <p><span>19</span>.99 €</p>
+                <span>Monthly</span>
               </div>
-              <span>Precio</span>
+              <div className={styles.landing_prices_feature}>
+                <h5>Website <strong>Maintenance</strong></h5>
+                <h5>Up to <strong>5 Changes</strong> per Month</h5>
+                <h5>Template <strong>Customization</strong></h5>
+                <h5><strong>24/7</strong> Support</h5>
+                <h5>Setup <strong>Guideline</strong></h5>
+              </div>
+              <button>Subscribe Now</button>
             </div>
             <div className={styles.landing_prices_pack}>
-              <h4>Titulo</h4>
-              <div className={styles.landing_prices_feature}>
-                <h5>Incluye mantenimiento web bla bla bla</h5>
+              <div className={styles.landing_prices_header}>
+                <h4>Standard Pack</h4>
+                <p>29.99€</p>
+                <span>Monthly</span>
               </div>
-              <span>Precio</span>
+              <div className={styles.landing_prices_feature}>
+                <h5>Website <strong>Maintenance</strong></h5>
+                <h5>Up to <strong>10 Changes</strong> per Month</h5>
+                <h5>Template <strong>Customization</strong></h5>
+                <h5><strong>24/7</strong> Support</h5>
+                <h5>Setup <strong>Guideline</strong></h5>
+                <h5>Brand Logo <strong>Design</strong></h5>
+
+              </div>
+              <button>Subscribe Now</button>
             </div>
             <div className={styles.landing_prices_pack}>
-              <h4>Titulo</h4>
-              <div className={styles.landing_prices_feature}>
-                <h5>Incluye mantenimiento web bla bla bla</h5>
+              <div className={styles.landing_prices_header}>
+                <h4>Standart Pack</h4>
+                <p>29.99€</p>
+                <span>Monthly</span>
               </div>
-              <span>Precio</span>
+              <div className={styles.landing_prices_feature}>
+                <h5>Website <strong>Maintenance</strong></h5>
+                <h5><strong>+10 Changes</strong> per Month</h5>
+                <h5>Template <strong>Customization</strong></h5>
+                <h5><strong>24/7</strong> Support</h5>
+                <h5>Setup <strong>Guideline</strong></h5>
+                <h5>Brand Logo <strong>Design</strong></h5>
+                <h5>Help in <stong>SEO</stong></h5>
+              </div>
+              <button>Subscribe Now</button>
             </div>
           </div>
         </section>
