@@ -85,7 +85,7 @@ export default function Home() {
                 <h5>Website <strong>Maintenance</strong></h5>
                 <h5>Up to <strong>5 Changes</strong> per Month</h5>
                 <h5>Template <strong>Customization</strong></h5>
-                <h5><strong>24/7</strong> Support</h5>
+                <h5><strong>24/7</strong> Live Support</h5>
                 <h5>Setup <strong>Guideline</strong></h5>
               </div>
               <button>Subscribe Now</button>
@@ -93,14 +93,14 @@ export default function Home() {
             <div className={styles.landing_prices_pack}>
               <div className={styles.landing_prices_header}>
                 <h4>Standard Pack</h4>
-                <p>29.99€</p>
+                <p><span>29</span>.99€</p>
                 <span>Monthly</span>
               </div>
               <div className={styles.landing_prices_feature}>
                 <h5>Website <strong>Maintenance</strong></h5>
                 <h5>Up to <strong>10 Changes</strong> per Month</h5>
                 <h5>Template <strong>Customization</strong></h5>
-                <h5><strong>24/7</strong> Support</h5>
+                <h5><strong>24/7</strong> Live Support</h5>
                 <h5>Setup <strong>Guideline</strong></h5>
                 <h5>Brand Logo <strong>Design</strong></h5>
 
@@ -110,14 +110,14 @@ export default function Home() {
             <div className={styles.landing_prices_pack}>
               <div className={styles.landing_prices_header}>
                 <h4>Standart Pack</h4>
-                <p>29.99€</p>
+                <p><span>39</span>.99€</p>
                 <span>Monthly</span>
               </div>
               <div className={styles.landing_prices_feature}>
                 <h5>Website <strong>Maintenance</strong></h5>
                 <h5><strong>+10 Changes</strong> per Month</h5>
                 <h5>Template <strong>Customization</strong></h5>
-                <h5><strong>24/7</strong> Support</h5>
+                <h5><strong>24/7</strong> Live Support</h5>
                 <h5>Setup <strong>Guideline</strong></h5>
                 <h5>Brand Logo <strong>Design</strong></h5>
                 <h5>Help in <stong>SEO</stong></h5>
@@ -126,20 +126,30 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id='#reviews'>
+        <section id='Reviews' className={styles.landing_reviews_container}>
           <div className={styles.landing_reviews_title}>
-            <h3>Testimonials</h3>
-            <h4>Check what our clients are saying</h4>
+            <h3>Check what our clients are saying</h3>
+            <h4>We place huge value on strong relationships and have seen the benefit they brings to our business. Customer feedback is vital in helping us to get it right.</h4>
           </div>
-          <div className={styles.landing_reviews_content}>
-            <div><img /></div>
-            <div className={styles.landing_review}>
-              <span>''</span>
-              <h5>Titulo review</h5>
-              <p>Descripcion</p>
-              <div className={styles.landing_review_rating}>Star</div>
-              <h5>Nombre</h5>
-              <p>Empresa</p>
+          <div className={styles.landing_reviews}>
+            <div className={styles.landing_reviews_content}>
+              <div><img src='/assets/images/Jenny Wilson.png' /></div>
+              <div className={styles.landing_review}>
+                <p>I am Webtrix's longest standing customer and I really can’t express how much it has helped my business grow. In the past, I had to spend a lot of time trying to figure out how to keep my website alive and looking good. Now with Webtrix, I have time left over for all the other aspects of my business that I need to</p>
+                <div className={styles.landing_review_rating}>Star</div>
+                <h5>Jenny Wilson</h5>
+                <p>Event Manager</p>
+              </div>
+            </div>
+            
+            <div className={styles.landing_reviews_content}>
+              <div className={styles.landing_reviews_image}><img src='/assets/images/Albert Didier.png' /></div>
+              <div className={styles.landing_review}>
+                <p>I love Webtrix so much! I'm a small business owner who does not have a lot of time to update my website, and Webtrix is perfect for me. It's just so easy to log in and make updates to my site whenever I need to. There are plenty of design templates that are super easy to edit, too.</p>
+                <div className={styles.landing_review_rating}>Star</div>
+                <h5>Albert Didier</h5>
+                <p>Restaurant owner</p>
+              </div>
             </div>
           </div>
           <div>Controles</div>
