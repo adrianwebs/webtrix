@@ -429,6 +429,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  height: 100vh;
 }
 
 .landing_reviews_title h3 {
@@ -465,3 +466,129 @@
   justify-content: center;
   
 }
+
+.landing_review h5 {
+  color: var(--primary-color);
+}
+
+.landing_faq_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  height: 100vh;
+}
+
+.landing_faq_title {
+  width: 60%;
+}
+
+.landing_faq_title h3 {
+  font-weight: 400;
+}
+
+.landing_contact_container {
+  background-color: var(--secondary-color);
+  padding: 2rem;
+
+  position: relative;
+}
+
+.landing_contact_content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing_contact_text {
+  flex: 2;
+}
+
+.landing_contact_text h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.landing_contact_text h4 {
+  font-size: 48px;
+}
+
+.landing_contact_text p {
+  font-size: 18px;
+}
+
+.landing_contact_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  margin: 0 8rem;
+}
+
+.landing_contact_form input, .landing_contact_form textarea{
+  background-color: #f1fdff33;
+  border: none;
+  margin: 1rem;
+  width: 100%;
+  padding: 10px 1rem;
+  border-radius: 5px;
+}
+
+.landing_contact_form button {
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+
+  color: var(--white);
+
+  transition: all .3s ease-in-out;
+}
+
+.landing_contact_form button:hover {
+  cursor: pointer;
+  background-color: #dc5f17;
+}
+
+.landing_footer_container {
+  padding: 4rem;
+  text-align: center;
+}
+
+.landing_footer_content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.landing_footer_navbar {
+  text-align: center;
+}
+
+.landing_bottomnavbar_items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  list-style-type: none;
+  text-align: center;
+
+  margin-block-start: 0;
+  padding-inline-start: 0;
+}
+
+.landing_bottomnavbar_items li {
+  text-decoration: none;
+  margin-top: 10px;
+  text-align: center;
+}
+

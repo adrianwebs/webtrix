@@ -154,10 +154,10 @@ export default function Home() {
           </div>
           <div>Controles</div>
         </section>
-        <section id='#faq'>
+        <section id='#faq' className={styles.landing_faq_container}>
           <div className={styles.landing_faq_title}>
-            <h2>Services that WEBTRIX offers</h2>
-            <h3> More and more websites are coming into being, but it's hard to get a professional web design. Webstartic provide the one-click web page design service and makes your web page design idea into reality!</h3>
+            <h2>Frequented Asked Questions</h2>
+            <h3>Be sure you understand how we work and fix all your doubts here with the questions the clients usually have or contact us!</h3>
           </div>
           <div className={styles.landing_faq_content}>
             <div className={styles.landing_faq_item}>
@@ -166,37 +166,48 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id='#contact'>
+        <section id='#contact' className={styles.landing_contact_container}>
           <div className={styles.landing_contact_content}>
             <div className={styles.landing_contact_text}>
               <h3>Why Choose Use</h3>
               <h4>Partiality On or Continue in the particular principles</h4>
               <p>Contact Us so we can help you on setting up your business and offer you the best prices</p>
             </div>
-            <form>
+            <form className={styles.landing_contact_form}>
               <input placeholder='Name' />
-              <input placeholder='Email' />
+              <input placeholder='Email' type='email' />
               <textarea placeholder='Message' />
+              <button>Submit</button>
             </form>
           </div>
         </section>
-        <footer>
-          <div className={styles.landing_footer_social}>
-            <img />
-            <span>Online helps companies managing their website business easily.</span>
-            <div className={styles.landing_footer_apps}>Redes</div>
+        <footer className={styles.landing_footer_container}>
+          <div className={styles.landing_footer_content}>
+            <div className={styles.landing_footer_social}>
+              <img />
+              <span>Online helps companies managing their website business easily.</span>
+              <div className={styles.landing_footer_apps}>Redes</div>
+            </div>
+            <div className={styles.landing_footer_navbar}>
+              <p>Navbar</p>
+              <ul className={styles.landing_bottomnavbar_items}>
+              {sections.map((section, index) => (
+                <li key={index}><a className={styles.landing_botomnavbar_item} href={'#' + section} >{section}</a></li>
+              ))}
+              </ul>
+            </div>
+            <div className={styles.landing_footer_newsletter}>
+              <form>
+                <input placeholder='Email' />
+                <button>Subscribe</button>
+              </form>
+              <span>Will send you monthly updates for your better website management.</span>
+            </div>            
           </div>
-          <div className={styles.landing_footer_navbar}></div>
-          <div className={styles.landing_footer_newsletter}>
-            <form>
-              <input placeholder='Email' />
-              <button>Subscribe</button>
-            </form>
-            <span>Will send you monthly updates for your better website management.</span>
-          </div>
+         <br />
+        <span>Copyright @Webtrix 2022. All Rights Reserved.</span> 
         </footer>
-        <br />
-        <span>Copyright @Webtrix 2022. All Rights Reserved.</span>
+        
     </div>
   )
 }
