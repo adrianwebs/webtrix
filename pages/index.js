@@ -2,17 +2,38 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 import Head from 'next/head'
-
 import Link from 'next/link'
 
 import AutoAwesomeMosaicIcon from '@mui/icons-material/AutoAwesomeMosaic';
 import DiamondIcon from '@mui/icons-material/Diamond';
 import Engineering from '@mui/icons-material/Engineering';
 
+import { loginWithFacebook, onAuthStateChangedUser } from '../firebase/client'
+
+import { useState, useEffect } from 'react';
+
+import { motion } from 'framer-motion'
+
 const sections = ['Features', 'Prices', 'Reviews', 'FAQ', 'Contact']
 
 export default function Home() {
 
+  const [user, setUser] = useState(undefined)
+
+  useEffect(() => {
+    onAuthStateChangedUser(setUser)
+  }, [])
+  
+
+  const handleLogin = () => {
+    loginWithFacebook().then(user => {
+      const {avatar, username} = user
+      setUser(user)
+      console.log(user)
+    }).catch(err => {
+      console.log(err)
+    })
+  }
 
   return (
     <div className={styles.container}>
@@ -24,13 +45,21 @@ export default function Home() {
             ))}
           </ul>
           <div className={styles.landing_navbar_features}>
-            <select className={styles.landing_navbar_languages} defaultValue='English'>
-              <option>English</option>
-              <option>Spanish</option>
-              <option>French</option>
-              <option>German</option>
-            </select>
-            <button className={styles.landing_navbar_signup}>Sign Up</button>
+            {
+              user === null && <button className={styles.landing_navbar_signup} onClick={handleLogin}>Member Area</button>
+            }
+            {
+              user && user.avatar &&
+
+              <motion.div
+                animate={{opacity: [0, 1]}}
+                transition={{ ease: 'easeInOut', duration: 0.3}}
+              >
+                <img src={user.avatar} />
+                <strong>{user.username}</strong>
+              </motion.div>
+            }
+          
           </div>
             </nav>
         <header className={styles.landing_header_content}>
