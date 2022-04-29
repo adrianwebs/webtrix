@@ -1,5 +1,5 @@
 import firebase, {initializeApp} from 'firebase/app'
-import auth, {signInWithPopup, getAuth, FacebookAuthProvider, onAuthStateChanged } from 'firebase/auth'
+import auth, {signInWithPopup, getAuth, FacebookAuthProvider, onAuthStateChanged, signOut } from 'firebase/auth'
 
 
 const firebaseConfig = {
@@ -16,7 +16,6 @@ initializeApp(firebaseConfig)
 
 const mapUserFromFirebaseAuthToUser = (user) => {
     const {displayName, email, photoURL} = user
-
     return {
         avatar: photoURL,
         username: displayName,
@@ -24,10 +23,14 @@ const mapUserFromFirebaseAuthToUser = (user) => {
     }
 }
 
+export const signOutUser = () => {
+    return signOut(getAuth());
+}
+
 export const onAuthStateChangedUser = (onChange) => {
     return onAuthStateChanged(getAuth(), user => {
-        const normalizedUser = user ?
-        mapUserFromFirebaseAuthToUser(user) : null
+        const normalizedUser = user ? mapUserFromFirebaseAuthToUser(user) : null
+
         onChange(normalizedUser)
     })
 }

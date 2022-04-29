@@ -5,10 +5,39 @@ import { motion } from 'framer-motion'
 import { FacebookOutlined, Twitter, Google } from '@mui/icons-material'
 
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import styles from './styles.module.css'
 
+import { loginWithFacebook, onAuthStateChangedUser, signOutUser } from '../../firebase/client'
+import { Hidden } from '@mui/material'
+import useUser from '../../hooks/useUser'
+
 function index() {
+
+    const user = useUser()
+    const router = useRouter()
+
+    useEffect(() => {
+      user && router.replace('/home')
+    }, [user])
+
+    const handleFacebook = () => {
+        loginWithFacebook().catch(err => {
+            console.log(err)
+        })
+    }
+
+    const handleTwitter = () => {
+
+    }
+
+    const handleGoogle = () => {
+
+    }
+
+    
+
   return (
     <div className={styles.login_container}>
         <div className={styles.login_content}>
@@ -17,18 +46,28 @@ function index() {
                 <h3>Login</h3>    
             </div>
             <div className={styles.login_data}>
-                <label>Email Address</label>
-                <input placeholder='Type your Email' id='email' type='email'></input>
-                <label>Password</label>
-                <input placeholder='Type your Password' id='password' type='password'></input>
-                <a>Forgot password?</a>
-                <button className={styles.login_button}>Login</button>
-                <span>Or Sign Up Using</span>
-                <div className={styles.login_buttons}>
-                    <button className={styles.login_facebook}><FacebookOutlined /></button>
-                    <button className={styles.login_twitter}><Twitter /></button>
-                    <button className={styles.login_google}><Google /></button>
-                </div>
+                {
+                    user === null &&
+                
+                    <div>
+                        <label>Email Address</label>
+                        <input placeholder='Type your Email' id='email' type='email'></input>
+                        <label>Password</label>
+                        <input placeholder='Type your Password' id='password' type='password'></input>
+                        <a>Forgot password?</a>    
+                        <button className={styles.login_button}>Login</button>
+                        <span>Or Sign Up Using</span>
+                        <div className={styles.login_buttons}>
+                            <button onClick={handleFacebook} className={styles.login_facebook}><FacebookOutlined /></button>
+                            <button onClick={handleTwitter} className={styles.login_twitter}><Twitter /></button>
+                            <button onClick={handleGoogle} className={styles.login_google}><Google /></button>
+                        </div>
+                    </div>
+                }
+                {
+                    user === undefined && <img src='/spinner.gif' />
+                }
+                
             </div>
             <div className={styles.login_footer}>
                 <span>Don't have an account yet?</span>

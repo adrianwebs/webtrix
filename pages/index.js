@@ -22,7 +22,7 @@ export default function Home() {
 
   useEffect(() => {
     onAuthStateChangedUser(setUser)
-  }, [])
+  }, [user])
   
 
   const handleLogin = () => {
