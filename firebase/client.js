@@ -1,5 +1,5 @@
 import firebase, {initializeApp} from 'firebase/app'
-import auth, {signInWithPopup, getAuth, FacebookAuthProvider, onAuthStateChanged, signOut } from 'firebase/auth'
+import auth, {signInWithPopup, getAuth, FacebookAuthProvider, onAuthStateChanged, signOut, TwitterAuthProvider, GoogleAuthProvider } from 'firebase/auth'
 
 
 const firebaseConfig = {
@@ -36,8 +36,16 @@ export const onAuthStateChangedUser = (onChange) => {
 }
 
 export const loginWithFacebook = () => {
-    const auth = getAuth()
     const facebookProvider = new FacebookAuthProvider()
-    return signInWithPopup(auth, facebookProvider)
+    return signInWithPopup(getAuth(), facebookProvider)
 }
 
+export const loginWithTwitter = () => {
+    const twitterProvider = new TwitterAuthProvider()
+    return signInWithPopup(getAuth(), twitterProvider)
+}
+
+export const loginWithGoogle = () => {
+    const googleProvider = new GoogleAuthProvider()
+    return signInWithPopup(getAuth(), googleProvider)
+}

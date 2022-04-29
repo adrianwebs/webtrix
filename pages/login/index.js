@@ -9,7 +9,7 @@ import { useRouter } from 'next/router'
 
 import styles from './styles.module.css'
 
-import { loginWithFacebook, onAuthStateChangedUser, signOutUser } from '../../firebase/client'
+import { loginWithFacebook, loginWithGoogle, loginWithTwitter, onAuthStateChangedUser, signOutUser } from '../../firebase/client'
 import { Hidden } from '@mui/material'
 import useUser from '../../hooks/useUser'
 
@@ -29,11 +29,15 @@ function index() {
     }
 
     const handleTwitter = () => {
-
+        loginWithTwitter().catch(err => {
+            console.log(err)
+        })
     }
 
     const handleGoogle = () => {
-
+        loginWithGoogle().catch(err => {
+            console.log(err)
+        })
     }
 
     
@@ -49,7 +53,7 @@ function index() {
                 {
                     user === null &&
                 
-                    <div>
+                    <div className={styles.login_data}>
                         <label>Email Address</label>
                         <input placeholder='Type your Email' id='email' type='email'></input>
                         <label>Password</label>
