@@ -74,7 +74,7 @@ function Login() {
                 
             </div>
             <div className={styles.login_footer}>
-                <span>Don't have an account yet?</span>
+                <span>Don&apos;t have an account yet?</span>
                 <a href='#'>Register your Email</a>
             </div>
         </div>
