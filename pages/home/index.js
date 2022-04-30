@@ -5,27 +5,40 @@ import { signOutUser } from '../../firebase/client'
 
 import { motion } from 'framer-motion'
 
+import HomeNavbar from '../../components/HomeNavbar/HomeNavbar'
+import TrixTemplate from '../../components/TrixTemplate/TrixTemplate'
+
+import styles from './styles.module.css'
+
+
 function HomePage() {
     const user = useUser()
 
-    const handleSignOut = () => {
-        signOutUser()
-    }
+    const sections = ['1', '2','3', '4', '5', '6', '7', '8', '9']
+
 
     return (
-    <div>
+    <div className={styles.home_container}>
         {
             user && 
-            <motion.div
-                initial={{ opacity: 0 , y: -100}}
-                animate={ user ? {opacity: 1, y: 0} : {opacity: 0}}
-                transition={{ duration: 1, ease: 'easeInOut'}}
-            >
-                <img src={user.avatar} />
-                <strong>{user.username}</strong>
-                <button onClick={handleSignOut} >Logout</button>
-            </motion.div>
+            <HomeNavbar username={user.username} avatar={user.avatar} />
         }
+        <div className={styles.home_content}>
+            <div className={styles.home_searchBar}>
+                <input placeholder='Search in your favourite templates...'></input>
+                <select>
+                    <option hidden selected>Category</option>
+                    <option value='restaurant'>Restaurant</option>
+                </select>
+            </div>
+            <div className={styles.home_gallery}>
+                {
+                    sections.map((section, index) => (
+                        <TrixTemplate index={section} key={index} />
+                    ))
+                }
+            </div>
+        </div>
     </div>
   )
 }
