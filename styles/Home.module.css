@@ -1,5 +1,5 @@
 .container {
-  padding: 0 2rem;
+  padding: 0 0;
 }
 
 .main {
@@ -114,3 +114,482 @@
     flex-direction: column;
   }
 }
+
+.landing_navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: .5rem 5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+
+  backdrop-filter: blur(2px);
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 1;
+}
+
+.landing_navbar_logo {
+  font-family: Knucklehead;
+  font-size: 40px;
+}
+
+.landing_navbar_items {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+.landing_navbar_items li {
+  text-decoration: none;
+}
+
+.landing_navbar_item {
+  margin: 0 15px;
+  font-weight: 500;
+  transition: all .3s ease-in-out;
+}
+
+.landing_navbar_item:hover {
+  color: var(--primary-color);
+}
+
+.landing_navbar_signup {
+  border: none;
+  border-radius: 3px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 5px 15px;
+  margin-left: 10px;
+  transition: .3s ease-in-out;
+}
+
+.landing_navbar_signup:hover {
+  background-color: #dc5f17;
+  cursor: pointer;
+}
+
+
+.landing_header_content {
+  height: 100vh;
+  background-image: url(../public/assets/images/background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 10rem;
+
+}
+
+.landing_header_title h1{
+  margin: auto;
+  font-weight: 400;
+  text-align: center;
+  line-height: 50px;
+}
+
+.landing_header_title {
+  text-align: center;
+}
+
+.landing_header_title button {
+  margin-top: 1rem;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 1rem 2rem;
+  border-radius: 25px;
+
+  animation: grow 2s ease-in-out infinite;
+}
+
+@keyframes grow {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.landing_main_container {
+  background-color: #C6E2FFcd;
+  padding: 2rem;
+  height: 100vh;
+  box-shadow: 0 6px 8px -2px rgba(0, 0, 0, 0.25);
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.landing_main_content{
+  width: 50%;
+}
+
+.landing_main_content h3 {
+  font-weight: 400;
+}
+
+.landing_main_content h2 {
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.landing_main_content h2 span {
+  font-family: Knucklehead;
+  font-size: 48px;
+  font-weight: 500;
+}
+
+.landing_main_items {
+  display: flex;
+  flex-direction: row;
+  width: 65%;
+}
+
+.landing_main_box {
+  background-color: var(--white);
+  border-radius: 15px;
+  margin: 25px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  text-align: start;
+
+  position: relative;
+  z-index: 0;
+}
+
+.landing_main_icon > *{
+  background-color: #eee;
+  padding: .25rem;
+  border-radius: 5px;
+}
+
+.landing_main_box span {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-right: 10px;
+  margin-top: -15px;
+  font-family: 'Sorts Mill Goudy', serif;
+  font-size: 124px;
+  color: #dc5f1788;
+
+  z-index: -1;
+}
+
+.landing_main_box h4 {
+  font-weight: 400;
+}
+
+.landing_prices_container {
+  
+  width: 100%;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+}
+
+.landing_prices_content {
+  width: 60%;
+}
+
+.landing_prices_content h3 {
+  font-weight: 400;
+}
+
+.landing_prices_content h2 {
+  font-size: xx-large;
+}
+
+.landing_prices_packages {
+  padding: 2rem;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.landing_prices_pack {
+  background-color: #d4d4d422;
+  height: 100%;
+
+  border-radius: 10px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.landing_prices_header {
+  background-color: var(--secondary-color);
+  width: 100%;
+
+  border-radius: 10px 10px 0 0;
+
+  padding: 2rem 4rem;
+  color: var(--white);
+}
+
+.landing_prices_header h4 {
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0;
+}
+
+.landing_prices_header p span {
+  font-size: 54px;
+  margin: 0;
+  font-weight: 400;
+  font-family: 'Titilium Web', sans-serif;
+}
+
+.landing_prices_header p {
+  font-size: 48px;
+  margin: 5px;
+}
+
+.landing_prices_header span {
+  font-weight: 100;
+  text-transform: lowercase;
+  font-size: 24px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.landing_prices_feature {
+  padding: 1rem .5rem 2rem 1rem;
+  border-left: solid .5px #c4c4c444;
+  border-right: solid .5px #c4c4c444;
+}
+
+.landing_prices_feature h5 {
+  font-weight: 400;
+  text-align: left;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.landing_prices_feature h5::after {
+  content: '✔';
+  margin-left: 5px;
+  color: green;
+}
+
+.landing_prices_pack button {
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+ padding: 1rem 1rem;
+ 
+ background-color: var(--secondary-color);
+ color: var(--white);
+ border: none;
+ text-transform: uppercase;
+
+ border-radius: 0 0 10px 10px;
+ font-weight: 700;
+ transition: all .3s ease-in-out;
+}
+
+.landing_prices_pack button:hover {
+  cursor: pointer;
+  background-color: #0070f3;
+}
+
+.landing_prices_pack:nth-child(2) .landing_prices_header, .landing_prices_pack:nth-child(2) button {
+  background-color: var(--primary-color);
+}
+
+.landing_reviews_container {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.landing_reviews_title h3 {
+  font-size: xx-large;
+  margin: 1rem;
+}
+
+.landing_reviews_title h4 {
+  font-weight: 400;
+}
+
+.landing_reviews_title {
+  width: 50%;
+}
+
+.landing_reviews {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 70%;
+}
+
+.landing_reviews_content {
+  background-color: #f5f5f5;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  margin: 1rem;
+
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  
+}
+
+.landing_review h5 {
+  color: var(--primary-color);
+}
+
+.landing_faq_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  height: 100vh;
+}
+
+.landing_faq_title {
+  width: 60%;
+}
+
+.landing_faq_title h3 {
+  font-weight: 400;
+}
+
+.landing_contact_container {
+  background-color: var(--secondary-color);
+  padding: 2rem;
+
+  position: relative;
+}
+
+.landing_contact_content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing_contact_text {
+  flex: 2;
+}
+
+.landing_contact_text h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.landing_contact_text h4 {
+  font-size: 48px;
+}
+
+.landing_contact_text p {
+  font-size: 18px;
+}
+
+.landing_contact_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  margin: 0 8rem;
+}
+
+.landing_contact_form input, .landing_contact_form textarea{
+  background-color: #f1fdff33;
+  border: none;
+  margin: 1rem;
+  width: 100%;
+  padding: 10px 1rem;
+  border-radius: 5px;
+}
+
+.landing_contact_form button {
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+
+  color: var(--white);
+
+  transition: all .3s ease-in-out;
+}
+
+.landing_contact_form button:hover {
+  cursor: pointer;
+  background-color: #dc5f17;
+}
+
+.landing_footer_container {
+  padding: 4rem;
+  text-align: center;
+}
+
+.landing_footer_content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.landing_footer_navbar {
+  text-align: center;
+}
+
+.landing_bottomnavbar_items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  list-style-type: none;
+  text-align: center;
+
+  margin-block-start: 0;
+  padding-inline-start: 0;
+}
+
+.landing_bottomnavbar_items li {
+  text-decoration: none;
+  margin-top: 10px;
+  text-align: center;
+}
+
