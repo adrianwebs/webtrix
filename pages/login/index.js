@@ -13,7 +13,7 @@ import { loginWithFacebook, loginWithGoogle, loginWithTwitter, onAuthStateChange
 import { Hidden } from '@mui/material'
 import useUser from '../../hooks/useUser'
 
-function index() {
+function Index() {
 
     const user = useUser()
     const router = useRouter()
