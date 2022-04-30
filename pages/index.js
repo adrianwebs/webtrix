@@ -75,7 +75,7 @@ export default function Home() {
         <main id='Features' className={styles.landing_main_container}>
           <div className={styles.landing_main_content}>
             <h2>Services that <span>WEBTRIX</span> offers</h2>
-            <h3> More and more websites are coming into being, but it's hard to get a professional web design. Webstartic provide the one-click web page design service and makes your web page design idea into reality!</h3>
+            <h3> More and more websites are coming into being, but it&apos;s hard to get a professional web design. Webstartic provide the one-click web page design service and makes your web page design idea into reality!</h3>
           </div>
           <div className={styles.landing_main_items}>
             <div className={styles.landing_main_box}>
@@ -164,7 +164,7 @@ export default function Home() {
             <div className={styles.landing_reviews_content}>
               <div><img src='/assets/images/Jenny Wilson.png' /></div>
               <div className={styles.landing_review}>
-                <p>I am Webtrix's longest standing customer and I really can’t express how much it has helped my business grow. In the past, I had to spend a lot of time trying to figure out how to keep my website alive and looking good. Now with Webtrix, I have time left over for all the other aspects of my business that I need to</p>
+                <p>I am Webtrix&apos;s longest standing customer and I really can’t express how much it has helped my business grow. In the past, I had to spend a lot of time trying to figure out how to keep my website alive and looking good. Now with Webtrix, I have time left over for all the other aspects of my business that I need to</p>
                 <div className={styles.landing_review_rating}>Star</div>
                 <h5>Jenny Wilson</h5>
                 <p>Event Manager</p>
@@ -174,7 +174,7 @@ export default function Home() {
             <div className={styles.landing_reviews_content}>
               <div className={styles.landing_reviews_image}><img src='/assets/images/Albert Didier.png' /></div>
               <div className={styles.landing_review}>
-                <p>I love Webtrix so much! I'm a small business owner who does not have a lot of time to update my website, and Webtrix is perfect for me. It's just so easy to log in and make updates to my site whenever I need to. There are plenty of design templates that are super easy to edit, too.</p>
+                <p>I love Webtrix so much! I&apos;m a small business owner who does not have a lot of time to update my website, and Webtrix is perfect for me. It&apos;s just so easy to log in and make updates to my site whenever I need to. There are plenty of design templates that are super easy to edit, too.</p>
                 <div className={styles.landing_review_rating}>Star</div>
                 <h5>Albert Didier</h5>
                 <p>Restaurant owner</p>

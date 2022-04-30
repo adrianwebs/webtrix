@@ -13,7 +13,7 @@ import { loginWithFacebook, loginWithGoogle, loginWithTwitter, onAuthStateChange
 import { Hidden } from '@mui/material'
 import useUser from '../../hooks/useUser'
 
-function Index() {
+function Login() {
 
     const user = useUser()
     const router = useRouter()
@@ -74,7 +74,7 @@ function Index() {
                 
             </div>
             <div className={styles.login_footer}>
-                <span>Don't have an account yet?</span>
+                <span>Don&apos;t have an account yet?</span>
                 <a href='#'>Register your Email</a>
             </div>
         </div>
@@ -82,4 +82,4 @@ function Index() {
   )
 }
 
-export default index
+export default Login

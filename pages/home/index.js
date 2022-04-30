@@ -5,7 +5,7 @@ import { signOutUser } from '../../firebase/client'
 
 import { motion } from 'framer-motion'
 
-function index() {
+function HomePage() {
     const user = useUser()
 
     const handleSignOut = () => {
@@ -30,4 +30,4 @@ function index() {
   )
 }
 
-export default index
+export default HomePage
