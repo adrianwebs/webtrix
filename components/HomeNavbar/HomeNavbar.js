@@ -1,9 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Avatar from '../Avatar/Avatar'
 
 import styles from './styles.module.css'
 
 import {signOutUser} from '../../firebase/client'
+
+import { motion } from 'framer-motion'
 
 function HomeNavbar ({username, avatar}) {
 
@@ -11,9 +13,20 @@ function HomeNavbar ({username, avatar}) {
     signOutUser()
   }
 
+  const handleNav = (e) => {
+    console.log(e)
+  }
+
+  const navegationSections = ['Overview', 'Templates', 'Changes', 'Planning', 'Settings']
+  const [navegation, setNavegation] = useState(null)
+
   return (
     <>
-      <div className={styles.navbar_container}>
+      <motion.div className={styles.navbar_container}
+        animate={{opacity: [0, 1], y:[-100, 0]}}
+        initial={{opacity: 0}}
+        transition={{duration: 1, ease: 'easeInOut'}}
+      >
         <div className={styles.navbar_topnav}>
           <div className={styles.navbar_title}>
             <h2>WEBTRIX</h2>
@@ -40,13 +53,13 @@ function HomeNavbar ({username, avatar}) {
           </div>
         </div>
         <div className={styles.navbar_botnav}>
-          <button>Overview</button>
+          <button onClick={handleNav}>Overview</button>
           <button>Templates</button>
           <button>Changes</button>
           <button>Planning</button>
           <button>Settings</button>
         </div>
-      </div>
+      </motion.div>
     </>
   )
 }

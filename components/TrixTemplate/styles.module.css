@@ -1,0 +1,152 @@
+.trix_card {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all .3s ease-in-out;
+
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.trix_card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.14);
+}
+
+.trix_image {
+    position: relative;
+    z-index: 0;
+    height: 100px;
+    -webkit-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.75));
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.75));
+}
+
+.trix_image img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.trix_hover {
+    position: absolute;
+    top: 0;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.4);
+    height: 100%;
+    transition: all .3s ease-in-out;
+}
+
+.trix_image:hover .trix_hover {
+    opacity: 1;
+    backdrop-filter: opacity(40%);
+}
+
+.trix_hover button {
+    border: none;
+    background: var(--black);
+    color: var(--white);
+    margin: 0 4px;
+    border-radius: 999px;
+    height: 30px;
+    width: 30px;
+    transition: all .3s ease-in-out;
+    opacity: 1;
+}
+
+.trix_hover button:hover {
+    background: var(--white);
+    color: var(--black);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.trix_hover button svg {
+    color: inherit;
+    display: block;
+    margin: auto;
+    font-size: 16px;
+}
+
+.trix_category {
+    position: absolute;
+    bottom: -10px;
+    padding: 5px 30px;
+    width: auto;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    text-align: center;
+    z-index: 1;
+    background-color: var(--white);
+    border-radius: 9999px;
+}
+
+.trix_card strong {
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-weight: 400;
+}
+
+.trix_card p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    color: #c4c4c4;
+    margin: 5px 0;
+}
+
+.trix_bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trix_createdAt {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #777;
+    font-size: 12px;
+}
+
+.trix_createdAt span {
+    margin-left: 0.5rem;
+}
+
+.trix_buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.trix_buttons button {
+    border: none;
+    background: var(--black);
+    color: var(--white);
+    margin: 0 4px;
+    border-radius: 999px;
+    height: 30px;
+    width: 30px;
+    transition: all .3s ease-in-out;
+}
+
+.trix_buttons button:hover {
+    background: var(--white);
+    color: var(--black);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.trix_buttons button svg {
+    color: inherit;
+    display: block;
+    margin: auto;
+    font-size: 16px;
+}
